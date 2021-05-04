@@ -19,6 +19,7 @@ public class Team {
     public ArrayList<Player> getTeam(){
         return players;
     }
+
     public void addPlayer(Player player){
         if(nofPlayers <= 15){ // roster maximum of 15
             nofPlayers++;

@@ -96,4 +96,48 @@ public class UnitTest {
         assertEquals(5.0, lowry.getPPG(), 0.1);
         assertEquals(100.0, lowry.getFgPercentage(), 0.1);
     }
+
+    @Test
+    public void ppgTest(){
+        Player lowry = new Player("Kyle Lowry");
+        Player siakam = new Player("Pascal Siakam");
+        Player fredVanVleet = new Player("Fred Van Vleet");
+        Player boucher = new Player("Chris Boucher");
+
+        Team raptors = new Team("Toronto Raptors");
+        raptors.addPlayer(lowry);
+        raptors.addPlayer(siakam);
+        raptors.addPlayer(fredVanVleet);
+        raptors.addPlayer(boucher);
+
+        Player curry = new Player("Steph Curry");
+        Player wiggins = new Player("Andrew Wiggins");
+        Player oubre = new Player("Kelly Oubre");
+        Player looney = new Player("Kevon Looney");
+
+        Team warriors = new Team("Warriors");
+        warriors.addPlayer(curry);
+        warriors.addPlayer(wiggins);
+        warriors.addPlayer(oubre);
+        warriors.addPlayer(looney);
+
+        League nba = new League("NBA");
+        nba.addTeam(raptors);
+        nba.addTeam(warriors);
+
+        int points = 5;
+        for(Team team: nba.getTeams()){
+            for (Player player : team.getTeam()) {
+                player.setPoints(points);
+                player.setGamesPlayed(2);
+                points += 5;
+            }
+        } // this should have Looney with the most ppg and lowry with the least (2.5)
+
+        ArrayList<Player> ppgList = nba.getPPGSorted();
+
+        assertEquals(looney, ppgList.get(0));
+        assertEquals(lowry.getPPG(), 2.5, 0.1);
+        assertEquals(lowry, ppgList.get(ppgList.size()-1));
+    }
 }
