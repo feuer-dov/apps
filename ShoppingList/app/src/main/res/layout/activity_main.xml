@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/teal_700">
+
+    <TextView
+        android:id="@+id/text_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grocery List"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_200"
+        android:textSize="50dp" />
+    <TextView
+        android:id="@+id/text_view_1"
+        android:layout_below="@+id/text_view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_2"
+        android:layout_below="@+id/text_view_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_3"
+        android:layout_below="@+id/text_view_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_4"
+        android:layout_below="@+id/text_view_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_5"
+        android:layout_below="@+id/text_view_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_6"
+        android:layout_below="@+id/text_view_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_7"
+        android:layout_below="@+id/text_view_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_8"
+        android:layout_below="@+id/text_view_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_9"
+        android:layout_below="@+id/text_view_8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <TextView
+        android:id="@+id/text_view_10"
+        android:layout_below="@+id/text_view_9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:textSize="50dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"/>
+
+    <Button
+        android:onClick="onAddItemClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_9"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="-67dp"
+        android:layout_toRightOf="@+id/text_view_10"
+        android:backgroundTint="@color/teal_200"
+        android:text="Add Item"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+</RelativeLayout>

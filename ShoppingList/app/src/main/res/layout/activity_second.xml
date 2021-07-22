@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@color/teal_700">
+
+    <TextView
+        android:id="@+id/text_view_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:text="Items"
+        android:textSize="60dp"
+        android:gravity="center"
+        />
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/text_view_items"
+        android:layout_centerInParent="true"
+        android:text="Cheese"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_rice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_cheese"
+        android:layout_centerInParent="true"
+        android:text="Rice"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_perrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_rice"
+        android:layout_centerInParent="true"
+        android:text="Perrier"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_eggs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_perrier"
+        android:layout_centerInParent="true"
+        android:text="Eggs"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_milk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_eggs"
+        android:layout_centerInParent="true"
+        android:text="Milk"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_chocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_milk"
+        android:layout_centerInParent="true"
+        android:text="Chocolate"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_chips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_chocolate"
+        android:layout_centerInParent="true"
+        android:text="Chips"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_potatoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_chips"
+        android:layout_centerInParent="true"
+        android:text="Potatoes"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_bagels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_potatoes"
+        android:layout_centerInParent="true"
+        android:text="Bagels"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+    <Button
+        android:onClick="onClick"
+        android:id="@+id/button_pizza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:layout_below="@+id/button_bagels"
+        android:layout_centerInParent="true"
+        android:text="Pizza"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+
+
+</RelativeLayout>

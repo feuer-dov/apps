@@ -140,4 +140,83 @@ public class UnitTest {
         assertEquals(lowry.getPPG(), 2.5, 0.1);
         assertEquals(lowry, ppgList.get(ppgList.size()-1));
     }
+    @Test
+    public void MutualTeamPlayerInteractionTest(){
+        Player lowry = new Player("Kyle Lowry");
+        Team raptors = new Team("Toronto Raptors");
+        raptors.addPlayer(lowry);
+        assertEquals(raptors, lowry.getTeam());
+        //ensures that lowry's team is the raptors as executed by adding lowry to the team
+    }
+    @Test
+    public void GameTest_01(){
+        Player lowry = new Player("Kyle Lowry");
+        Player siakam = new Player("Pascal Siakam");
+        Player fredVanVleet = new Player("Fred Van Vleet");
+        Player boucher = new Player("Chris Boucher");
+
+        Team raptors = new Team("Raptors");
+        raptors.addPlayer(lowry);
+        raptors.addPlayer(siakam);
+        raptors.addPlayer(fredVanVleet);
+        raptors.addPlayer(boucher);
+
+        Player curry = new Player("Steph Curry");
+        Player wiggins = new Player("Andrew Wiggins");
+        Player oubre = new Player("Kelly Oubre");
+        Player looney = new Player("Kevon Looney");
+
+        Team warriors = new Team("Warriors");
+        warriors.addPlayer(curry);
+        warriors.addPlayer(wiggins);
+        warriors.addPlayer(oubre);
+        warriors.addPlayer(looney);
+
+        League nba = new League("NBA");
+        nba.addTeam(raptors);
+        nba.addTeam(warriors);
+
+        //game test
+        Game game = new Game(warriors, raptors);
+        game.twoPointerMade(curry);
+        game.twoPointerMade(curry);
+        game.twoPointerMade(curry);
+        game.twoPointerMade(curry);
+        game.twoPointerMade(curry);
+        game.twoPointerMade(curry); // 12 pts for warriors
+
+        game.twoPointerMade(lowry);
+        game.twoPointerMade(lowry);
+        game.twoPointerMade(lowry);
+        game.twoPointerMade(lowry);
+        game.twoPointerMade(lowry); //10 pts for raptors
+
+        game.gameOver();
+        assertEquals("Warriors 12: Raptors 10", game.getScore());
+        assertEquals(lowry.getPPG(), 10.0, 0.1);
+        assertEquals(boucher.getGamesPlayed(), 1);
+
+        Game game2 = new Game(warriors, raptors);
+        game2.twoPointerMade(curry);
+        game2.twoPointerMade(curry);
+        game2.twoPointerMade(curry);
+        game2.twoPointerMade(curry);
+        game2.twoPointerMade(curry);// 10 pts for warriors
+
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry);
+        game2.twoPointerMade(lowry); // 20 pts for raptors
+
+        game2.gameOver();
+        assertEquals("Warriors 10: Raptors 20", game2.getScore());
+        assertEquals(lowry.getPPG(), 15.0, 0.1);
+        assertEquals(boucher.getGamesPlayed(), 2);
+    }
 }

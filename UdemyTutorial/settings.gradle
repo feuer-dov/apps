@@ -1,0 +1,3 @@
+include ':JavaStuff'
+include ':app'
+rootProject.name = "UdemyTutorial"

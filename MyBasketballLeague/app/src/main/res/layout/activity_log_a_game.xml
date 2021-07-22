@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary"
+    android:orientation="vertical"
+    tools:context=".LogAGame">
+
+
+    <LinearLayout
+        android:id="@+id/center_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:background="@color/secondary"
+        android:orientation="vertical" />
+
+
+    <LinearLayout
+        android:id="@+id/home_team_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignRight="@+id/center_point"
+        android:background="@color/primary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="138dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/warriors_logo" />
+
+        <TextView
+            android:id="@+id/home_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:text="Warriors"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/home_team_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="70dp" />
+
+        <Button
+            android:id="@+id/shot_made_home"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/shot_made"
+            android:textAllCaps="false"
+            android:onClick="onShotMadeHomeClicked"/>
+
+        <Button
+            android:id="@+id/shot_missed_home"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/shot_missed"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/turnover_home"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/turnover"
+            android:textAllCaps="false"
+            android:onClick="onTurnoverClickHome"/>
+
+        <Button
+            android:id="@+id/steal_home"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/steal"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/block_home"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/block"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/away_team_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/center_point"
+        android:background="@color/primary"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="113dp"
+            android:layout_height="138dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/raptors_logo" />
+
+        <TextView
+            android:id="@+id/away_team_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:text="Raptors"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/away_team_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="sans-serif-light"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="70dp" />
+
+        <Button
+            android:id="@+id/shot_made_away"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/shot_made"
+            android:textAllCaps="false"
+            android:onClick="onShotMadeAwayClicked"/>
+
+        <Button
+            android:id="@+id/shot_missed_away"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/shot_missed"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/turnover_away"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/turnover"
+            android:textAllCaps="false"
+            android:onClick="onTurnoverClickAway"/>
+
+        <Button
+            android:id="@+id/steal_away"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/steal"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/block_away"
+            android:layout_width="188dp"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/secondary"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/block"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/secondary"
+        android:backgroundTint="@color/secondary" />
+
+</RelativeLayout>

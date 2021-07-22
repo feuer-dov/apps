@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "485257362750",
+    "firebase_url": "https://basketball-league-b51d6-default-rtdb.firebaseio.com",
+    "project_id": "basketball-league-b51d6",
+    "storage_bucket": "basketball-league-b51d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485257362750:android:8c69e15cc5ef372ddfc06f",
+        "android_client_info": {
+          "package_name": "myapps.basketballapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485257362750-5a2t40qq649jo1ri4791b04nu9rd2pgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKiVenW4qobMdjGvhA9ajv8J5A8TXhrVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485257362750-5a2t40qq649jo1ri4791b04nu9rd2pgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485257362750:android:ffcf3c02da1c03bfdfc06f",
+        "android_client_info": {
+          "package_name": "myapps.basketballgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485257362750-5a2t40qq649jo1ri4791b04nu9rd2pgu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKiVenW4qobMdjGvhA9ajv8J5A8TXhrVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485257362750-5a2t40qq649jo1ri4791b04nu9rd2pgu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

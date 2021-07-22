@@ -1,14 +1,20 @@
 package  myapps.mybasketballleague.models;
 
+import android.content.Intent;
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.Comparator;
 
-public class Player{
+public class Player implements Parcelable {
     private int totalShots;
     private int madeShots;
     private int points;
     private int assists;
     private int turnovers;
     private int gamesPlayed;
+    private Team team;
+    private String number;
 
     public String name;
 
@@ -18,6 +24,30 @@ public class Player{
     }
 
     //getters
+
+    protected Player(Parcel in) {
+        totalShots = in.readInt();
+        madeShots = in.readInt();
+        points = in.readInt();
+        assists = in.readInt();
+        turnovers = in.readInt();
+        gamesPlayed = in.readInt();
+        team = in.readParcelable(Team.class.getClassLoader());
+        number = in.readString();
+        name = in.readString();
+    }
+
+    public static final Creator<Player> CREATOR = new Creator<Player>() {
+        @Override
+        public Player createFromParcel(Parcel in) {
+            return new Player(in);
+        }
+
+        @Override
+        public Player[] newArray(int size) {
+            return new Player[size];
+        }
+    };
 
     public double getPPG(){
         double ppg = ((double)points / gamesPlayed);
@@ -63,8 +93,19 @@ public class Player{
     public int getPoints() {
         return points;
     }
+
+    public Team getTeam(){
+        return this.team;
+    }
+
+    public int getGamesPlayed(){
+        return this.gamesPlayed;
+    }
     //setters
 
+    public void setTeam(Team team){
+        this.team = team;
+    }
     public void setPoints(int points){
         this.points = points;
     }
@@ -94,6 +135,13 @@ public class Player{
         this.gamesPlayed++;
     }
 
+    public void setNumber(String number){
+        int numberInteger = Integer.parseInt(number);
+
+        if(numberInteger >= 0 && numberInteger <= 99){
+            this.number = number;
+        }
+    }
     public static Comparator<Player> ppgComparator = new Comparator<Player>() {
         @Override
         public int compare(Player p1, Player p2) {
@@ -146,4 +194,21 @@ public class Player{
         }
     };
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(totalShots);
+        dest.writeInt(madeShots);
+        dest.writeInt(points);
+        dest.writeInt(assists);
+        dest.writeInt(turnovers);
+        dest.writeInt(gamesPlayed);
+        dest.writeParcelable(team, flags);
+        dest.writeString(number);
+        dest.writeString(name);
+    }
 }
